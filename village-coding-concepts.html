@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیہات کے کام - کوڈنگ کنسیپٹس | Village Work - Coding Concepts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 20px;
+        }
+        
+        .category-section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .category-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .category-icon {
+            font-size: 1.5em;
+        }
+        
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .concept-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .concept-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .concept-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .concept-description {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        
+        .concept-code {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #d63384;
+            word-break: break-all;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .concepts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌾 دیہات کے کام - کوڈنگ کنسیپٹس 🌾</h1>
+            <p>Village Work & Activities - Programming Concepts</p>
+        </div>
+        
+        <div class="content">
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">کل کنسیپٹس (Total Concepts)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">زمرے (Categories)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">6-7</div>
+                    <div class="stat-label">ہر زمرے میں (Per Category)</div>
+                </div>
+            </div>
+            
+            <!-- 1. کھیتی باڑی (FARMING) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🌾</span>
+                    کھیتی باڑی (Farming & Crops)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">1</div>
+                        <div class="concept-title">بیج کی بوائی (Seed Sowing)</div>
+                        <div class="concept-description">بیج کو مختلف صفوں میں لگانا</div>
+                        <div class="concept-code">array.push(seed)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">2</div>
+                        <div class="concept-title">فصل کی نگرانی (Crop Monitoring)</div>
+                        <div class="concept-description">روزانہ کی بنیاد پر فصل کی حالت دیکھنا</div>
+                        <div class="concept-code">checkStatus(crop)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">3</div>
+                        <div class="concept-title">پانی دینا (Irrigation)</div>
+                        <div class="concept-description">مناسب وقت پر فصل کو پانی دینا</div>
+                        <div class="concept-code">waterSchedule(interval)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">4</div>
+                        <div class="concept-title">کھاد ڈالنا (Fertilizing)</div>
+                        <div class="concept-description">فصل کو غذائی اجزاء فراہم کرنا</div>
+                        <div class="concept-code">addFertilizer(amount)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">5</div>
+                        <div class="concept-title">حشرات کی روک تھام (Pest Control)</div>
+                        <div class="concept-description">فصل کو نقصان دہ حشرات سے محفوظ رکھنا</div>
+                        <div class="concept-code">pestControl.apply()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">6</div>
+                        <div class="concept-title">فصل کی کٹائی (Harvesting)</div>
+                        <div class="concept-description">فصل کو سمجھ کر جمع کرنا</div>
+                        <div class="concept-code">harvest.collect(crop)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">7</div>
+                        <div class="concept-title">ہنگامی حالات (Seasonal Changes)</div>
+                        <div class="concept-description">موسم کی تبدیلی کے ساتھ کام میں تبدیلی</div>
+                        <div class="concept-code">updateSeason()</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2. مویشیوں کی پرورش (LIVESTOCK) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🐄</span>
+                    مویشیوں کی پرورش (Livestock Management)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">8</div>
+                        <div class="concept-title">مویشیوں کی گنتی (Cattle Count)</div>
+                        <div class="concept-description">کتنے مویشی موجود ہیں اس کا ریکارڈ رکھنا</div>
+                        <div class="concept-code">totalCattle = 0; for loop count</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">9</div>
+                        <div class="concept-title">چارہ کی فراہمی (Fodder Supply)</div>
+                        <div class="concept-description">مویشیوں کو دیہات کا کھانا فراہم کرنا</div>
+                        <div class="concept-code">feedAnimal(amount)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">10</div>
+                        <div class="concept-title">دودھ کی دہی (Milk Production)</div>
+                        <div class="concept-description">مویشیوں سے دودھ حاصل کرنا</div>
+                        <div class="concept-code">dailyMilkOutput.record()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">11</div>
+                        <div class="concept-title">مویشیوں کی صحت (Livestock Health)</div>
+                        <div class="concept-description">جانوروں کی بیماری دور کرنا</div>
+                        <div class="concept-code">veterinaryCheck()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">12</div>
+                        <div class="concept-title">باڑے کی صفائی (Stable Cleaning)</div>
+                        <div class="concept-description">مویشیوں کے رہنے کی جگہ صاف رکھنا</div>
+                        <div class="concept-code">cleanStable()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">13</div>
+                        <div class="concept-title">ٹیکے لگانا (Vaccination)</div>
+                        <div class="concept-description">مویشیوں کو بیماریوں سے بچانے کے لیے ٹیکہ</div>
+                        <div class="concept-code">vaccinate(animal)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">14</div>
+                        <div class="concept-title">نسل پروری (Breeding)</div>
+                        <div class="concept-description">اچھے نسل کے مویشی حاصل کرنا</div>
+                        <div class="concept-code">selectBreeding(parent1, parent2)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3. پولٹری (POULTRY) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🐔</span>
+                    مرغی پالن (Poultry Farming)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">15</div>
+                        <div class="concept-title">انڈوں کی جمع (Egg Collection)</div>
+                        <div class="concept-description">مرغیوں سے انڈے جمع کرنا</div>
+                        <div class="concept-code">eggs.collect()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">16</div>
+                        <div class="concept-title">انڈوں کی تقسیم (Egg Grading)</div>
+                        <div class="concept-description">انڈوں کو ان کی سائز کے مطابق تقسیم کرنا</div>
+                        <div class="concept-code">sortBySize(eggs)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">17</div>
+                        <div class="concept-title">انڈوں کو محفوظ رکھنا (Egg Storage)</div>
+                        <div class="concept-description">انڈوں کو صحیح درجہ حرارت میں رکھنا</div>
+                        <div class="concept-code">storeAtTemp(12)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">18</div>
+                        <div class="concept-title">مرغیوں کا کھانا (Poultry Feed)</div>
+                        <div class="concept-description">مرغیوں کو مناسب کھانا دینا</div>
+                        <div class="concept-code">feedPoultry(dailyAmount)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">19</div>
+                        <div class="concept-title">بیماریوں سے بچاؤ (Disease Prevention)</div>
+                        <div class="concept-description">مرغیوں کو بیماریوں سے محفوظ رکھنا</div>
+                        <div class="concept-code">preventDisease()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">20</div>
+                        <div class="concept-title">بڑھوتری میں رفتار (Growth Tracking)</div>
+                        <div class="concept-description">مرغیوں کی بڑھوتری پر نظر رکھنا</div>
+                        <div class="concept-code">trackGrowth(bird)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4. سبزیوں کی کاشت (VEGETABLE FARMING) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🥬</span>
+                    سبزیوں کی کاشت (Vegetable Farming)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">21</div>
+                        <div class="concept-title">نرسری تیار کرنا (Nursery Preparation)</div>
+                        <div class="concept-description">پودے لگانے کے لیے خصوصی جگہ تیار کرنا</div>
+                        <div class="concept-code">prepareNursery(area)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">22</div>
+                        <div class="concept-title">پودے منتقل کرنا (Transplanting)</div>
+                        <div class="concept-description">نرسری سے پودے کھیت میں لگانا</div>
+                        <div class="concept-code">transplant.fromNursery()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">23</div>
+                        <div class="concept-title">سبزیوں کی نگرانی (Vegetable Care)</div>
+                        <div class="concept-description">سبزیوں کے پودے کی دیکھ بھال</div>
+                        <div class="concept-code">monitor(vegetable)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">24</div>
+                        <div class="concept-title">علف ہرا نکالنا (Weeding)</div>
+                        <div class="concept-description">غیر ضروری گھاس نکالنا</div>
+                        <div class="concept-code">removeWeeds()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">25</div>
+                        <div class="concept-title">سبزیوں کی کٹائی (Harvesting Vegetables)</div>
+                        <div class="concept-description">تیار شدہ سبزیاں توڑنا</div>
+                        <div class="concept-code">harvest(vegetable)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">26</div>
+                        <div class="concept-title">سبزیوں کو صاف رکھنا (Produce Cleaning)</div>
+                        <div class="concept-description">کٹائی کے بعد سبزیوں کو دھونا</div>
+                        <div class="concept-code">clean(produce)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5. دیہاتی تعمیرات (VILLAGE CONSTRUCTION) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🏗️</span>
+                    دیہاتی تعمیرات (Village Construction)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">27</div>
+                        <div class="concept-title">زمین کی تیاری (Land Preparation)</div>
+                        <div class="concept-description">تعمیر کے لیے زمین تیار کرنا</div>
+                        <div class="concept-code">levelGround()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">28</div>
+                        <div class="concept-title">سیمنٹ کو ملانا (Concrete Mixing)</div>
+                        <div class="concept-description">بناؤ سامان کو ملانا</div>
+                        <div class="concept-code">mix(cement, sand, water)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">29</div>
+                        <div class="concept-title">ایٹوں کو اٹھانا (Brick Laying)</div>
+                        <div class="concept-description">ایٹ کو صحیح ترتیب سے لگانا</div>
+                        <div class="concept-code">layBricks(pattern)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">30</div>
+                        <div class="concept-title">چھت بنانا (Roof Construction)</div>
+                        <div class="concept-description">مکان کی چھت مکمل کرنا</div>
+                        <div class="concept-code">buildRoof(material)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">31</div>
+                        <div class="concept-title">نالیوں کی تعمیر (Drainage System)</div>
+                        <div class="concept-description">پانی نکالنے کی نالیاں بنانا</div>
+                        <div class="concept-code">installDrainage()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">32</div>
+                        <div class="concept-title">کھڑکیاں لگانا (Window Installation)</div>
+                        <div class="concept-description">مکان میں کھڑکیاں نصب کرنا</div>
+                        <div class="concept-code">installWindow(size)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 6. پانی کا انتظام (WATER MANAGEMENT) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">💧</span>
+                    پانی کا انتظام (Water Management)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">33</div>
+                        <div class="concept-title">کنوں کی کھودائی (Well Digging)</div>
+                        <div class="concept-description">پانی نکالنے کے لیے کنواں کھودنا</div>
+                        <div class="concept-code">digWell(depth)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">34</div>
+                        <div class="concept-title">پانی کی بچت (Water Conservation)</div>
+                        <div class="concept-description">پانی کو ضائع ہونے سے بچانا</div>
+                        <div class="concept-code">minimizeWaste()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">35</div>
+                        <div class="concept-title">پانی کی صفائی (Water Purification)</div>
+                        <div class="concept-description">پانی کو استعمال سے پہلے صاف کرنا</div>
+                        <div class="concept-code">purifyWater()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">36</div>
+                        <div class="concept-title">ٹیانکی میں ذخیرہ (Tank Storage)</div>
+                        <div class="concept-description">پانی کو ٹیانکی میں محفوظ رکھنا</div>
+                        <div class="concept-code">storeInTank(capacity)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">37</div>
+                        <div class="concept-title">پمپ کا کام (Pump Operation)</div>
+                        <div class="concept-description">الیکٹرک یا ڈیزل پمپ چلانا</div>
+                        <div class="concept-code">operatePump(power)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">38</div>
+                        <div class="concept-title">نہروں کو صاف کرنا (Canal Cleaning)</div>
+                        <div class="concept-description">آبپاشی کی نہروں کو صاف رکھنا</div>
+                        <div class="concept-code">cleanCanal()</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 7. رسائی اور نقل ونقال (ROADS & TRANSPORT) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🚜</span>
+                    رسائی اور نقل ونقال (Roads & Transport)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">39</div>
+                        <div class="concept-title">سڑک کی مرمت (Road Repair)</div>
+                        <div class="concept-description">دیہات کی سڑکوں کو ٹھیک کرنا</div>
+                        <div class="concept-code">repairRoad(section)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">40</div>
+                        <div class="concept-title">سڑک کی صفائی (Road Cleaning)</div>
+                        <div class="concept-description">سڑک پر کوڑے کو ہٹانا</div>
+                        <div class="concept-code">cleanRoad()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">41</div>
+                        <div class="concept-title">فصل کی ڈھلائی (Crop Transportation)</div>
+                        <div class="concept-description">فصل کو منڈی تک لے جانا</div>
+                        <div class="concept-code">transport(crop, destination)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">42</div>
+                        <div class="concept-title">گاڑی کی مرمت (Vehicle Repair)</div>
+                        <div class="concept-description">ٹریکٹر یا گاڑی کو ٹھیک کرنا</div>
+                        <div class="concept-code">fixVehicle(part)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">43</div>
+                        <div class="concept-title">بوجھ ڈھونا (Load Carrying)</div>
+                        <div class="concept-description">کسان کی چیزوں کو لے کر چلنا</div>
+                        <div class="concept-code">carryLoad(weight)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">44</div>
+                        <div class="concept-title">ریہڑی چلانا (Cart Operation)</div>
+                        <div class="concept-description">بیل کی ریہڑی چلانا</div>
+                        <div class="concept-code">driveCart()</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. کپڑے اور دھلائی (TEXTILES & LAUNDRY) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">👕</span>
+                    کپڑے اور دھلائی (Textiles & Laundry)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">45</div>
+                        <div class="concept-title">کپاس کی کٹائی (Cotton Harvesting)</div>
+                        <div class="concept-description">کپاس کو پھول سے الگ کرنا</div>
+                        <div class="concept-code">harvestCotton(field)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">46</div>
+                        <div class="concept-title">دھلائی کے کپڑے (Laundry Sorting)</div>
+                        <div class="concept-description">کپڑوں کو رنگ کے مطابق الگ کرنا</div>
+                        <div class="concept-code">sortClothes(byColor)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">47</div>
+                        <div class="concept-title">کپڑے دھونا (Washing Clothes)</div>
+                        <div class="concept-description">ہاتھ سے یا مشین سے کپڑے دھونا</div>
+                        <div class="concept-code">wash(clothes, water)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">48</div>
+                        <div class="concept-title">کپڑوں کو سکھانا (Drying Clothes)</div>
+                        <div class="concept-description">دھلے ہوئے کپڑوں کو دھوپ میں سکھانا</div>
+                        <div class="concept-code">dryClothes(sunlight)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">49</div>
+                        <div class="concept-title">کپڑوں کو استری کرنا (Ironing)</div>
+                        <div class="concept-description">کپڑوں کو پرس کرنا</div>
+                        <div class="concept-code">iron(clothes, temp)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">50</div>
+                        <div class="concept-title">رنگین کرنا (Dyeing)</div>
+                        <div class="concept-description">کپڑوں کو رنگ میں ڈبونا</div>
+                        <div class="concept-code">dye(cloth, color)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 9. غذائی اشیاء (FOOD PROCESSING) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🍚</span>
+                    غذائی اشیاء (Food Processing)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">51</div>
+                        <div class="concept-title">اناج کو الگ کرنا (Grain Threshing)</div>
+                        <div class="concept-description">اناج کو بھوسی سے الگ کرنا</div>
+                        <div class="concept-code">separate(grain, chaff)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">52</div>
+                        <div class="concept-title">آٹا پیسنا (Flour Grinding)</div>
+                        <div class="concept-description">اناج کو پاؤڈر بنانا</div>
+                        <div class="concept-code">grind(grain)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">53</div>
+                        <div class="concept-title">روٹی بنانا (Bread Making)</div>
+                        <div class="concept-description">آٹا گوندھ کر روٹی پکانا</div>
+                        <div class="concept-code">makeBread(flour)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">54</div>
+                        <div class="concept-title">دہی بنانا (Yogurt Making)</div>
+                        <div class="concept-description">دودھ سے دہی تیار کرنا</div>
+                        <div class="concept-code">makeDahi(milk)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">55</div>
+                        <div class="concept-title">مکھن نکالنا (Butter Extraction)</div>
+                        <div class="concept-description">دہی سے مکھن نکالنا</div>
+                        <div class="concept-code">extractButter(yogurt)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">56</div>
+                        <div class="concept-title">اچار بنانا (Pickling)</div>
+                        <div class="concept-description">سبزیوں سے اچار تیار کرنا</div>
+                        <div class="concept-code">makePickle(vegetable, spices)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 10. سلائی اور بنائی (SEWING & CRAFTS) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🪡</span>
+                    سلائی اور بنائی (Sewing & Crafts)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">57</div>
+                        <div class="concept-title">کپڑے کی پیمائش (Fabric Measurement)</div>
+                        <div class="concept-description">لباس بنانے کے لیے کپڑے کی پیمائش</div>
+                        <div class="concept-code">measure(cloth)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">58</div>
+                        <div class="concept-title">نمونہ بنانا (Pattern Making)</div>
+                        <div class="concept-description">کاغذ پر لباس کا نمونہ بنانا</div>
+                        <div class="concept-code">createPattern(design)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">59</div>
+                        <div class="concept-title">کپڑوں کو کاٹنا (Fabric Cutting)</div>
+                        <div class="concept-description">نمونے کے مطابق کپڑوں کو کاٹنا</div>
+                        <div class="concept-code">cut(cloth, pattern)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">60</div>
+                        <div class="concept-title">سلائی کرنا (Stitching)</div>
+                        <div class="concept-description">کپڑوں کے ٹکڑوں کو سی کر جوڑنا</div>
+                        <div class="concept-code">stitch(piece1, piece2)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">61</div>
+                        <div class="concept-title">بٹن لگانا (Button Attachment)</div>
+                        <div class="concept-description">لباس میں بٹن نصب کرنا</div>
+                        <div class="concept-code">attachButton(cloth)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">62</div>
+                        <div class="concept-title">ضیاع مرمت (Repair & Mending)</div>
+                        <div class="concept-description">پرانے لباس کو ٹھیک کرنا</div>
+                        <div class="concept-code">mend(tear)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 11. حفاظت و صحت (SAFETY & HEALTH) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🏥</span>
+                    حفاظت و صحت (Safety & Health)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">63</div>
+                        <div class="concept-title">ہاتھ دھونا (Hand Washing)</div>
+                        <div class="concept-description">صحت برقرار رکھنے کے لیے ہاتھ صاف رکھنا</div>
+                        <div class="concept-code">wash(hands)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">64</div>
+                        <div class="concept-title">پانی صحیح رکھنا (Water Safety)</div>
+                        <div class="concept-description">پینے کا پانی صحت مند رکھنا</div>
+                        <div class="concept-code">ensureSafety(water)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">65</div>
+                        <div class="concept-title">سپلی کا ریکارڈ (Medical Supply)</div>
+                        <div class="concept-description">دوائیوں اور مرہم کا ریکارڈ</div>
+                        <div class="concept-code">recordSupply(medicine)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">66</div>
+                        <div class="concept-title">سانس لینا محفوظ (Respiratory Safety)</div>
+                        <div class="concept-description">کیڑے مار دوا استعمال کرتے وقت سانس محفوظ</div>
+                        <div class="concept-code">useMask(pesticide)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">67</div>
+                        <div class="concept-title">زخموں کی مرہم (Wound Care)</div>
+                        <div class="concept-description">کھوت یا زخم کو سنبھالنا</div>
+                        <div class="concept-code">treatWound()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">68</div>
+                        <div class="concept-title">دھول سے بچاؤ (Dust Protection)</div>
+                        <div class="concept-description">کام کے دوران منہ کو ڈھانپنا</div>
+                        <div class="concept-code">protect(mouth)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 12. خود مختاری (SELF-RELIANCE) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🤝</span>
+                    خود مختاری (Self-Reliance)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">69</div>
+                        <div class="concept-title">سڑک سے سامان لانا (Gathering Resources)</div>
+                        <div class="concept-description">اپنی ضروریات کے سامان جمع کرنا</div>
+                        <div class="concept-code">collectResources()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">70</div>
+                        <div class="concept-title">ذخیرہ اندوزی (Storage Planning)</div>
+                        <div class="concept-description">سردیوں کے لیے سامان محفوظ رکھنا</div>
+                        <div class="concept-code">store(supplies, months)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">71</div>
+                        <div class="concept-title">خود کاری (Self-sufficiency)</div>
+                        <div class="concept-description">اپنے کھیت سے تمام چیزیں حاصل کرنا</div>
+                        <div class="concept-code">sustainSelf()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">72</div>
+                        <div class="concept-title">تبادلہ (Bartering)</div>
+                        <div class="concept-description">اپنی چیزیں دوسرے سے بدلنا</div>
+                        <div class="concept-code">exchange(item1, item2)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">73</div>
+                        <div class="concept-title">ہنرمندی سیکھنا (Skill Development)</div>
+                        <div class="concept-description">نئے کام سیکھ کر اپنی صلاحیت بڑھانا</div>
+                        <div class="concept-code">learnSkill(trade)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">74</div>
+                        <div class="concept-title">بچت کرنا (Savings)</div>
+                        <div class="concept-description">کمائی میں سے بچت کرنا</div>
+                        <div class="concept-code">save(amount)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 13. موسمی کام (SEASONAL WORK) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🌤️</span>
+                    موسمی کام (Seasonal Work)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">75</div>
+                        <div class="concept-title">بارش کی تیاری (Monsoon Prep)</div>
+                        <div class="concept-description">بارش کے موسم میں کام کی تیاری</div>
+                        <div class="concept-code">prepareForMonsoon()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">76</div>
+                        <div class="concept-title">سردیوں کے لیے تیاری (Winter Prep)</div>
+                        <div class="concept-description">سردیوں میں کام کو سنبھالنا</div>
+                        <div class="concept-code">prepareForWinter()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">77</div>
+                        <div class="concept-title">گرمیوں کا کام (Summer Work)</div>
+                        <div class="concept-description">گرمیوں میں کھیت میں کام</div>
+                        <div class="concept-code">summerTask()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">78</div>
+                        <div class="concept-title">موسم کا مطالعہ (Weather Tracking)</div>
+                        <div class="concept-description">موسم کو سمجھ کر کام کرنا</div>
+                        <div class="concept-code">trackWeather()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">79</div>
+                        <div class="concept-title">فصل کی قسم (Crop Rotation)</div>
+                        <div class="concept-description">ہر موسم میں مختلف فصل لگانا</div>
+                        <div class="concept-code">rotateCrop(season)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">80</div>
+                        <div class="concept-title">بیماری کی روک تھام (Disease Prevention)</div>
+                        <div class="concept-description">موسم کے مطابق بیماری سے بچاؤ</div>
+                        <div class="concept-code">preventSeasonal(disease)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 14. رواں کاری (DAILY OPERATIONS) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">📋</span>
+                    رواں کاری (Daily Operations)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">81</div>
+                        <div class="concept-title">صبح کا کام (Morning Tasks)</div>
+                        <div class="concept-description">صبح کو کیا کیا کام کرنا ہے</div>
+                        <div class="concept-code">morningRoutine()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">82</div>
+                        <div class="concept-title">دوپہر کا کام (Afternoon Tasks)</div>
+                        <div class="concept-description">دوپہر میں کرنے والے کام</div>
+                        <div class="concept-code">afternoonRoutine()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">83</div>
+                        <div class="concept-title">شام کا کام (Evening Tasks)</div>
+                        <div class="concept-description">شام کو انجام دینے والے کام</div>
+                        <div class="concept-code">eveningRoutine()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">84</div>
+                        <div class="concept-title">ہفتے کا منصوبہ (Weekly Planning)</div>
+                        <div class="concept-description">ایک ہفتے کے کام کا منصوبہ</div>
+                        <div class="concept-code">weeklyPlan()</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">85</div>
+                        <div class="concept-title">ماہانہ لیجر (Monthly Log)</div>
+                        <div class="concept-description">ہر مہینے کے کام کو لکھنا</div>
+                        <div class="concept-code">logMonthly(activity)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">86</div>
+                        <div class="concept-title">موثر انتظام (Efficient Management)</div>
+                        <div class="concept-description">وقت اور سامان کو بہتری سے استعمال</div>
+                        <div class="concept-code">optimizeEfficiency()</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 15. تعاون اور مدد (COOPERATION & HELP) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🙌</span>
+                    تعاون اور مدد (Cooperation & Help)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">87</div>
+                        <div class="concept-title">گاؤں میں مدد (Village Cooperation)</div>
+                        <div class="concept-description">ایک دوسرے کو کام میں مدد کرنا</div>
+                        <div class="concept-code">helpNeighbor(task)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">88</div>
+                        <div class="concept-title">کام میں شمولیت (Task Participation)</div>
+                        <div class="concept-description">اہم کام میں تمام لوگ حصہ لینا</div>
+                        <div class="concept-code">joinTask(community)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">89</div>
+                        <div class="concept-title">تجربہ کا اشتراک (Experience Sharing)</div>
+                        <div class="concept-description">بزرگوں سے سیکھنا اور تجربہ لینا</div>
+                        <div class="concept-code">shareExperience(elder)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">90</div>
+                        <div class="concept-title">مشاورت (Consultation)</div>
+                        <div class="concept-description">مسائل میں ایک دوسری سے رائے لینا</div>
+                        <div class="concept-code">consult(expert)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">91</div>
+                        <div class="concept-title">معاہدہ (Agreement)</div>
+                        <div class="concept-description">کام کے بارے میں اتفاق رائے</div>
+                        <div class="concept-code">makeAgreement(terms)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">92</div>
+                        <div class="concept-title">سازش (Planning Together)</div>
+                        <div class="concept-description">مل کر منصوبہ بندی کرنا</div>
+                        <div class="concept-code">planTogether(goal)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">93</div>
+                        <div class="concept-title">مسائل حل کرنا (Problem Solving)</div>
+                        <div class="concept-description">اہم مسائل میں حل نکالنا</div>
+                        <div class="concept-code">solveProblem(issue)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">94</div>
+                        <div class="concept-title">حدود برقرار (Maintaining Boundaries)</div>
+                        <div class="concept-description">سامان اور زمین کی حدود واضح رکھنا</div>
+                        <div class="concept-code">setBoundaries(property)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 16. ضروری ہنر (ESSENTIAL SKILLS) -->
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-icon">🔧</span>
+                    ضروری ہنر (Essential Skills)
+                </div>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">95</div>
+                        <div class="concept-title">ڈھیل کو سخت کرنا (Tightening)</div>
+                        <div class="concept-description">برقی پرزوں یا اوزاروں کو ٹھیک کرنا</div>
+                        <div class="concept-code">tighten(bolt)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">96</div>
+                        <div class="concept-title">رسی بندھنا (Rope Tying)</div>
+                        <div class="concept-description">مختلف طریقوں سے رسی باندھنا</div>
+                        <div class="concept-code">tieKnot(rope)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">97</div>
+                        <div class="concept-title">کھودائی کرنا (Digging)</div>
+                        <div class="concept-description">کدال سے خاک کھودنا</div>
+                        <div class="concept-code">dig(depth)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">98</div>
+                        <div class="concept-title">دق کرنا (Hammering)</div>
+                        <div class="concept-description">ہتھوڑے سے کھونٹی ٹھوکنا</div>
+                        <div class="concept-code">hammer(nail)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">99</div>
+                        <div class="concept-title">رشتہ توڑنا (Untying)</div>
+                        <div class="concept-description">پہلے سے باندھی گئی رسی کو کھولنا</div>
+                        <div class="concept-code">untie(knot)</div>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">100</div>
+                        <div class="concept-title">سب سیکھنا (Learning All Skills)</div>
+                        <div class="concept-description">دیہات کے تمام ضروری کام سیکھنا</div>
+                        <div class="concept-code">masterAllSkills()</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>✨ تمام 100 کوڈنگ کنسیپٹس - دیہات کے کام اور سرگرمیوں پر مبنی ✨</p>
+            <p>All 100 Coding Concepts - Based on Village Work & Activities</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">تیار کردہ: Kissan Code Repository | Created: May 5, 2026</p>
+        </div>
+    </div>
+</body>
+</html>
