@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🌾 Kisaan Code</title>
+  <title>🌾 Kisaan Code - 100 Village Concepts</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     /* ==============================
@@ -91,6 +91,7 @@
       cursor: pointer;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
       outline: none;
+      border: none;
     }
     .btn-outline {
       background: transparent;
@@ -677,10 +678,10 @@
     <section id="hero">
       <div class="hero-badge">🌱 Computer Science × Farming</div>
       <h1>Learn Code Through<br>the <em>Fields</em></h1>
-      <p>Click any card to reveal the Computer Science magic hidden inside everyday farming tasks.</p>
+      <p>Click any card to reveal the Computer Science magic hidden inside everyday farming tasks. 100 village concepts!</p>
       <div class="hero-stats">
-        <div class="stat"><strong>20</strong><small>Concepts</small></div>
-        <div class="stat"><strong>∞</strong><small>Shuffles</small></small></div>
+        <div class="stat"><strong>100</strong><small>Concepts</small></div>
+        <div class="stat"><strong>15</strong><small>Categories</small></div>
         <div class="stat"><strong>🧠</strong><small>Quiz Mode</small></div>
       </div>
     </section>
@@ -688,13 +689,27 @@
     <!-- FILTER SECTION -->
     <div class="filter-section">
       <button class="filter-btn active" data-filter="all">All Cards</button>
-      <button class="filter-btn" data-filter="farming">Farming Concepts</button>
-      <button class="filter-btn" data-filter="matlab">MATLAB Coding</button>
+      <button class="filter-btn" data-filter="farming">Farming & Crops</button>
+      <button class="filter-btn" data-filter="livestock">Livestock</button>
+      <button class="filter-btn" data-filter="poultry">Poultry</button>
+      <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+      <button class="filter-btn" data-filter="construction">Construction</button>
+      <button class="filter-btn" data-filter="water">Water Management</button>
+      <button class="filter-btn" data-filter="transport">Transport</button>
+      <button class="filter-btn" data-filter="textiles">Textiles</button>
+      <button class="filter-btn" data-filter="food">Food Processing</button>
+      <button class="filter-btn" data-filter="crafts">Crafts</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="resilience">Resilience</button>
+      <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+      <button class="filter-btn" data-filter="operations">Operations</button>
+      <button class="filter-btn" data-filter="cooperation">Cooperation</button>
+      <button class="filter-btn" data-filter="skills">Skills</button>
     </div>
 
     <!-- SECTION LABEL -->
     <div class="section-label" id="grid-label">
-      <h2>// Flash Cards</h2>
+      <h2>// Flash Cards - 100 Village Concepts</h2>
     </div>
 
     <!-- CARD GRID -->
@@ -725,185 +740,153 @@
   </main>
 
   <footer>
-    Made with ❤️ for farmers & coders · <a href="#">Kisaan Code</a>
+    Made with ❤️ for farmers & coders · <a href="#">Kisaan Code - 100 Concepts</a>
   </footer>
 
   <!-- ==================== JAVASCRIPT ==================== -->
   <script>
     /* ===================================================
-       1. DATA STRUCTURE — The Brain of the Application
+       1. DATA STRUCTURE — 100 Village Concepts
        Each object represents one flashcard with:
-         - id:         unique identifier
-         - category:   'farming' or 'matlab'
-         - frontEmoji: visual shown on card front
-         - frontTitle: farming concept name
-         - backTitle:  CS concept name (used in quiz)
-         - backDesc:   explanation of the CS concept
+          - id:         unique identifier
+          - category:   category name
+          - frontEmoji: visual shown on card front
+          - frontTitle: farming concept name
+          - backTitle:  CS concept name
+          - backDesc:   explanation
     =================================================== */
     const flashcardData = [
-      // ========== ORIGINAL FARMING CARDS ==========
-      {
-        id: 1,
-        category: 'farming',
-        frontEmoji: '🌱',
-        frontTitle: 'Beej ki Bori (Seed Bag)',
-        backTitle: 'VARIABLE',
-        backDesc: 'Just like a bag holds seeds, a variable holds specific data in memory.'
-      },
-      {
-        id: 2,
-        category: 'farming',
-        frontEmoji: '🛤️',
-        frontTitle: 'Khet ki Kyari (Field Row)',
-        backTitle: 'ARRAY',
-        backDesc: 'A structured row holding multiple items (crops/data) in a specific, numbered order.'
-      },
-      {
-        id: 3,
-        category: 'farming',
-        frontEmoji: '🚜',
-        frontTitle: 'Tractor',
-        backTitle: 'FUNCTION',
-        backDesc: 'A machine built to do a specific job. You "call" the tractor when you need plowing, just like calling a function.'
-      },
-      {
-        id: 4,
-        category: 'farming',
-        frontEmoji: '💧',
-        frontTitle: 'Nahar se Pani Dena',
-        backTitle: 'LOOP (FOR/WHILE)',
-        backDesc: 'Repeating the exact same watering action step-by-step until the entire field is hydrated.'
-      },
-      {
-        id: 5,
-        category: 'farming',
-        frontEmoji: '⛅',
-        frontTitle: 'Mausam Dekhna',
-        backTitle: 'IF / ELSE CONDITION',
-        backDesc: 'IF it rains, do not turn on the water pump. ELSE, turn it on. Making decisions based on conditions.'
-      },
+      // ========== 1. FARMING & CROPS (7 cards) ==========
+      { id: 1, category: 'farming', frontEmoji: '🌱', frontTitle: 'Beej ki Bori (Seed Bag)', backTitle: 'VARIABLE', backDesc: 'Just like a bag holds seeds, a variable holds specific data in memory.' },
+      { id: 2, category: 'farming', frontEmoji: '🛤️', frontTitle: 'Khet ki Kyari (Field Row)', backTitle: 'ARRAY', backDesc: 'A structured row holding multiple items (crops/data) in a specific, numbered order.' },
+      { id: 3, category: 'farming', frontEmoji: '🚜', frontTitle: 'Tractor', backTitle: 'FUNCTION', backDesc: 'A machine built to do a specific job. You "call" the tractor when you need plowing, just like calling a function.' },
+      { id: 4, category: 'farming', frontEmoji: '💧', frontTitle: 'Nahar se Pani Dena (Watering)', backTitle: 'LOOP', backDesc: 'Repeating the exact same watering action step-by-step until the entire field is hydrated.' },
+      { id: 5, category: 'farming', frontEmoji: '⛅', frontTitle: 'Mausam Dekhna (Weather Check)', backTitle: 'IF/ELSE', backDesc: 'IF it rains, do not turn on the water pump. ELSE, turn it on. Making decisions based on conditions.' },
+      { id: 6, category: 'farming', frontEmoji: '📊', frontTitle: 'Fasal ka Hisaab (Crop Count)', backTitle: 'VECTOR', backDesc: 'In MATLAB, a vector is a list of numbers like [1, 2, 3]. Each crop count forms a vector of yields.' },
+      { id: 7, category: 'farming', frontEmoji: '🗂️', frontTitle: 'Khet ke Naqshe (Field Map)', backTitle: 'MATRIX', backDesc: 'A 2D grid of values. Each row = field row, each column = harvest data. Perfect for storing crop grids!' },
 
-      // ========== NEW MATLAB CODING CARDS ==========
-      {
-        id: 6,
-        category: 'matlab',
-        frontEmoji: '📊',
-        frontTitle: 'Fasal ka Hisaab (Crop Count)',
-        backTitle: 'VECTOR',
-        backDesc: 'In MATLAB, a vector is a list of numbers like [1, 2, 3]. Each crop count forms a vector of yields.'
-      },
-      {
-        id: 7,
-        category: 'matlab',
-        frontEmoji: '🗂️',
-        frontTitle: 'Khet ke Naqshe (Field Map)',
-        backTitle: 'MATRIX',
-        backDesc: 'A 2D grid of values. Each row = field row, each column = harvest data. Perfect for storing crop grids!'
-      },
-      {
-        id: 8,
-        category: 'matlab',
-        frontEmoji: '🔢',
-        frontTitle: 'Padhai ka Nataija (Score Calculation)',
-        backTitle: 'ELEMENT-WISE OPERATION',
-        backDesc: 'Operations like .* and ./ in MATLAB work on every element separately, like calculating profit for each crop individually.'
-      },
-      {
-        id: 9,
-        category: 'matlab',
-        frontEmoji: '📈',
-        frontTitle: 'Fasal Ke Trends (Growth Chart)',
-        backTitle: 'PLOT FUNCTION',
-        backDesc: 'MATLAB\'s plot() visualizes data like drawing a growth curve of your crops throughout seasons.'
-      },
-      {
-        id: 10,
-        category: 'matlab',
-        frontEmoji: '🎯',
-        frontTitle: 'Lakshya Hasil Karna (Target Hit)',
-        backTitle: 'LOGICAL INDEXING',
-        backDesc: 'Filter data using conditions: harvest(harvest > 100) selects only harvests above 100 units.'
-      },
-      {
-        id: 11,
-        category: 'matlab',
-        frontEmoji: '🔄',
-        frontTitle: 'Barha Barha Kaam (Repetitive Task)',
-        backTitle: 'FOR LOOP',
-        backDesc: 'for i=1:10 repeats a task 10 times, like watering 10 fields one by one.'
-      },
-      {
-        id: 12,
-        category: 'matlab',
-        frontEmoji: '🚪',
-        frontTitle: 'Fasal Payda Hone Tak (Until Harvest)',
-        backTitle: 'WHILE LOOP',
-        backDesc: 'while(rainfall < required) keeps checking rain until enough water is received for crops.'
-      },
-      {
-        id: 13,
-        category: 'matlab',
-        frontEmoji: '✂️',
-        frontTitle: 'Bhumika Vibhajan (Part Selection)',
-        backTitle: 'ARRAY SLICING',
-        backDesc: 'harvest(3:5) selects elements 3 to 5, like choosing specific crops from your field.'
-      },
-      {
-        id: 14,
-        category: 'matlab',
-        frontEmoji: '🧮',
-        frontTitle: 'Ganitiya Samikaran (Math Formula)',
-        backTitle: 'MATHEMATICAL FUNCTIONS',
-        backDesc: 'MATLAB functions like sqrt(), sin(), max() solve farming equations: average yield, peak temperature curves.'
-      },
-      {
-        id: 15,
-        category: 'matlab',
-        frontEmoji: '💾',
-        frontTitle: 'Geher Mein Sehan (Store Data)',
-        backTitle: 'STRUCT / CELL ARRAY',
-        backDesc: 'Organize complex farm data: crop_data.name, crop_data.yield, crop_data.season in one place.'
-      },
-      {
-        id: 16,
-        category: 'matlab',
-        frontEmoji: '📝',
-        frontTitle: 'Likha Likha Naam (Named Containers)',
-        backTitle: 'STRUCTURE FIELDS',
-        backDesc: 'Like a farm ledger with labeled columns: season, rainfall, fertilizer, yield. Access via struct.field.'
-      },
-      {
-        id: 17,
-        category: 'matlab',
-        frontEmoji: '🔍',
-        frontTitle: 'Khoj Likho (Find & Locate)',
-        backTitle: 'FIND FUNCTION',
-        backDesc: 'find(condition) locates indices where condition is true: find all fields with crop_yield > target.'
-      },
-      {
-        id: 18,
-        category: 'matlab',
-        frontEmoji: '📊',
-        frontTitle: 'Samajh Mein Aana (Understand Data)',
-        backTitle: 'DATA VISUALIZATION',
-        backDesc: 'bar(), histogram(), heatmap() show farm patterns visually: Which fields performed best? Seasonal trends?'
-      },
-      {
-        id: 19,
-        category: 'matlab',
-        frontEmoji: '⚙️',
-        frontTitle: 'Naya Aala Banao (Create Tool)',
-        backTitle: 'FUNCTION DEFINITION',
-        backDesc: 'function [output] = farmTool(input) lets you build reusable tools for your farm calculations.'
-      },
-      {
-        id: 20,
-        category: 'matlab',
-        frontEmoji: '🎨',
-        frontTitle: 'Rang Se Sulannga (Colorful Display)',
-        backTitle: 'FIGURE & SUBPLOT',
-        backDesc: 'Create multiple plots in one window (figure, subplot) to compare yields, rainfall, temperature side-by-side.'
-      }
+      // ========== 2. LIVESTOCK (7 cards) ==========
+      { id: 8, category: 'livestock', frontEmoji: '🐄', frontTitle: 'Mowieshion ki Ginti (Cattle Count)', backTitle: 'FOR LOOP', backDesc: 'Count how many cattle exist - a loop iteration over all animals.' },
+      { id: 9, category: 'livestock', frontEmoji: '🌾', frontTitle: 'Chara ki Fraahi (Fodder Supply)', backTitle: 'CONDITIONAL ALLOCATION', backDesc: 'Allocate feed based on animal type - using IF statements to determine portions.' },
+      { id: 10, category: 'livestock', frontEmoji: '🥛', frontTitle: 'Doodh ki Dahi (Milk Production)', backTitle: 'DATA COLLECTION', backDesc: 'Recording daily milk output - like storing data in a database.' },
+      { id: 11, category: 'livestock', frontEmoji: '⚕️', frontTitle: 'Mowieshion ki Sehat (Livestock Health)', backTitle: 'HEALTH CHECK FUNCTION', backDesc: 'Veterinary checks like function calls - input (animal), output (health status).' },
+      { id: 12, category: 'livestock', frontEmoji: '🏠', frontTitle: 'Barre ki Safai (Stable Cleaning)', backTitle: 'MAINTENANCE ROUTINE', backDesc: 'Regular maintenance loops - clean stable(). Execute repeatedly.' },
+      { id: 13, category: 'livestock', frontEmoji: '💉', frontTitle: 'Tayke Lagana (Vaccination)', backTitle: 'FUNCTION CALL', backDesc: 'vaccinate(animal) - a function that takes input and prevents future errors.' },
+      { id: 14, category: 'livestock', frontEmoji: '👶', frontTitle: 'Nasal Parori (Breeding)', backTitle: 'GENETIC ALGORITHM', backDesc: 'selectBreeding(parent1, parent2) - combining better traits for quality output.' },
+
+      // ========== 3. POULTRY (7 cards) ==========
+      { id: 15, category: 'poultry', frontEmoji: '🐔', frontTitle: 'Andon ki Jam (Egg Collection)', backTitle: 'ARRAY PUSH', backDesc: 'eggs.push() - collecting eggs one by one into a collection.' },
+      { id: 16, category: 'poultry', frontEmoji: '📏', frontTitle: 'Andon ki Taksim (Egg Grading)', backTitle: 'SORTING ALGORITHM', backDesc: 'sortBySize(eggs) - organizing data by specific criteria.' },
+      { id: 17, category: 'poultry', frontEmoji: '❄️', frontTitle: 'Andon ko Mehfooz (Egg Storage)', backTitle: 'MEMORY STORAGE', backDesc: 'storeAtTemp(12) - maintaining specific conditions for data preservation.' },
+      { id: 18, category: 'poultry', frontEmoji: '🍗', frontTitle: 'Margiyon ka Khana (Poultry Feed)', backTitle: 'RESOURCE ALLOCATION', backDesc: 'feedPoultry(dailyAmount) - distributing resources efficiently.' },
+      { id: 19, category: 'poultry', frontEmoji: '🦠', frontTitle: 'Beemariyon se Bacha (Disease Prevention)', backTitle: 'ERROR PREVENTION', backDesc: 'preventDisease() - implementing safeguards to avoid failures.' },
+      { id: 20, category: 'poultry', frontEmoji: '📈', frontTitle: 'Burhotri Main Raftar (Growth Tracking)', backTitle: 'MONITORING METRICS', backDesc: 'trackGrowth(bird) - continuously measure performance indicators.' },
+      { id: 21, category: 'poultry', frontEmoji: '🏡', frontTitle: 'Murgiyon ka Dera (Poultry House)', backTitle: 'DATA STRUCTURE', backDesc: 'A structured container holding all poultry information together.' },
+
+      // ========== 4. VEGETABLE FARMING (6 cards) ==========
+      { id: 22, category: 'vegetables', frontEmoji: '🥬', frontTitle: 'Nursery Tayyar (Nursery Prep)', backTitle: 'INITIALIZATION', backDesc: 'prepareNursery() - setting up the environment before main process.' },
+      { id: 23, category: 'vegetables', frontEmoji: '🌱', frontTitle: 'Pode Muntaqal (Transplanting)', backTitle: 'DATA MIGRATION', backDesc: 'transplant.fromNursery() - moving data from one structure to another.' },
+      { id: 24, category: 'vegetables', frontEmoji: '👀', frontTitle: 'Sabziyon ki Nigrani (Vegetable Care)', backTitle: 'MONITORING', backDesc: 'monitor(vegetable) - continuous observation and care.' },
+      { id: 25, category: 'vegetables', frontEmoji: '🌾', frontTitle: 'Alf Hra Nikalna (Weeding)', backTitle: 'DATA CLEANING', backDesc: 'removeWeeds() - removing unwanted data/noise from the system.' },
+      { id: 26, category: 'vegetables', frontEmoji: '✂️', frontTitle: 'Sabziyon ki Katai (Harvesting)', backTitle: 'OUTPUT', backDesc: 'harvest(vegetable) - extracting the final product/result.' },
+      { id: 27, category: 'vegetables', frontEmoji: '🚿', frontTitle: 'Sabziyon ko Saaf (Produce Cleaning)', backTitle: 'DATA SANITIZATION', backDesc: 'clean(produce) - preparing data for safe consumption/use.' },
+
+      // ========== 5. VILLAGE CONSTRUCTION (6 cards) ==========
+      { id: 28, category: 'construction', frontEmoji: '🏗️', frontTitle: 'Zamin ki Tayyari (Land Preparation)', backTitle: 'FOUNDATION SETUP', backDesc: 'levelGround() - preparing the base for everything that follows.' },
+      { id: 29, category: 'construction', frontEmoji: '🏢', frontTitle: 'Siment ko Milana (Concrete Mixing)', backTitle: 'COMPILATION', backDesc: 'mix(cement, sand, water) - combining components into a cohesive result.' },
+      { id: 30, category: 'construction', frontEmoji: '🧱', frontTitle: 'Aiton ko Uthana (Brick Laying)', backTitle: 'ITERATION PATTERN', backDesc: 'layBricks(pattern) - repeating the same action in a structured way.' },
+      { id: 31, category: 'construction', frontEmoji: '🏠', frontTitle: 'Chhat Banana (Roof Construction)', backTitle: 'FINAL ASSEMBLY', backDesc: 'buildRoof(material) - completing the structure.' },
+      { id: 32, category: 'construction', frontEmoji: '💧', frontTitle: 'Naliyon ki Tamir (Drainage)', backTitle: 'ERROR HANDLING', backDesc: 'installDrainage() - managing overflow and unexpected situations.' },
+      { id: 33, category: 'construction', frontEmoji: '🪟', frontTitle: 'Khidkiyan Lagana (Windows)', backTitle: 'INTERFACE/UI', backDesc: 'installWindow(size) - creating access points and visibility.' },
+
+      // ========== 6. WATER MANAGEMENT (6 cards) ==========
+      { id: 34, category: 'water', frontEmoji: '💧', frontTitle: 'Koon ki Khoudai (Well Digging)', backTitle: 'RESOURCE DISCOVERY', backDesc: 'digWell(depth) - finding and accessing needed resources.' },
+      { id: 35, category: 'water', frontEmoji: '♻️', frontTitle: 'Pani ki Bachat (Water Conservation)', backTitle: 'OPTIMIZATION', backDesc: 'minimizeWaste() - using resources efficiently without waste.' },
+      { id: 36, category: 'water', frontEmoji: '🔬', frontTitle: 'Pani ki Safai (Water Purification)', backTitle: 'VALIDATION', backDesc: 'purifyWater() - ensuring data quality before use.' },
+      { id: 37, category: 'water', frontEmoji: '🏺', frontTitle: 'Taanki Main Zakhira (Tank Storage)', backTitle: 'CACHING', backDesc: 'storeInTank(capacity) - storing resources for later use.' },
+      { id: 38, category: 'water', frontEmoji: '⚙️', frontTitle: 'Pump ka Kaam (Pump Operation)', backTitle: 'POWER/EXECUTION', backDesc: 'operatePump(power) - activating the system with required energy.' },
+      { id: 39, category: 'water', frontEmoji: '🌊', frontTitle: 'Nahron ko Saaf (Canal Cleaning)', backTitle: 'PIPELINE MAINTENANCE', backDesc: 'cleanCanal() - keeping distribution channels clear and functional.' },
+
+      // ========== 7. ROADS & TRANSPORT (6 cards) ==========
+      { id: 40, category: 'transport', frontEmoji: '🚜', frontTitle: 'Sarik ki Maramt (Road Repair)', backTitle: 'INFRASTRUCTURE MAINTENANCE', backDesc: 'repairRoad(section) - maintaining the system pathways.' },
+      { id: 41, category: 'transport', frontEmoji: '🧹', frontTitle: 'Sarik ki Safai (Road Cleaning)', backTitle: 'CLEANUP', backDesc: 'cleanRoad() - removing obstacles and debris.' },
+      { id: 42, category: 'transport', frontEmoji: '🚚', frontTitle: 'Fasal ki Dhilai (Crop Transport)', backTitle: 'DATA DELIVERY', backDesc: 'transport(crop, destination) - moving data to target location.' },
+      { id: 43, category: 'transport', frontEmoji: '🔧', frontTitle: 'Gari ki Maramt (Vehicle Repair)', backTitle: 'SYSTEM DEBUGGING', backDesc: 'fixVehicle(part) - identifying and fixing broken components.' },
+      { id: 44, category: 'transport', frontEmoji: '💪', frontTitle: 'Bojh Dhona (Load Carrying)', backTitle: 'PAYLOAD HANDLING', backDesc: 'carryLoad(weight) - managing data size and transmission.' },
+      { id: 45, category: 'transport', frontEmoji: '🐂', frontTitle: 'Rahi Chalana (Cart Operation)', backTitle: 'PROCESS EXECUTION', backDesc: 'driveCart() - steering the operation toward goal.' },
+
+      // ========== 8. TEXTILES & LAUNDRY (6 cards) ==========
+      { id: 46, category: 'textiles', frontEmoji: '🌾', frontTitle: 'Kapas ki Katai (Cotton Harvesting)', backTitle: 'RESOURCE EXTRACTION', backDesc: 'harvestCotton(field) - gathering raw materials.' },
+      { id: 47, category: 'textiles', frontEmoji: '🧺', frontTitle: 'Dhulai ke Kapde (Laundry Sorting)', backTitle: 'CATEGORIZATION', backDesc: 'sortClothes(byColor) - organizing data by attributes.' },
+      { id: 48, category: 'textiles', frontEmoji: '💦', frontTitle: 'Kapde Dhona (Washing)', backTitle: 'CLEANING/FILTERING', backDesc: 'wash(clothes, water) - removing impurities from data.' },
+      { id: 49, category: 'textiles', frontEmoji: '☀️', frontTitle: 'Kapdon ko Sukha (Drying)', backTitle: 'PROCESSING', backDesc: 'dryClothes(sunlight) - allowing proper development of cleaned data.' },
+      { id: 50, category: 'textiles', frontEmoji: '👕', frontTitle: 'Kapdon ko Istri (Ironing)', backTitle: 'FORMATTING', backDesc: 'iron(clothes, temp) - presenting data in organized format.' },
+      { id: 51, category: 'textiles', frontEmoji: '🎨', frontTitle: 'Rangain Karna (Dyeing)', backTitle: 'STYLING', backDesc: 'dye(cloth, color) - customizing appearance and properties.' },
+
+      // ========== 9. FOOD PROCESSING (6 cards) ==========
+      { id: 52, category: 'food', frontEmoji: '🌾', frontTitle: 'Anaaj ko Alag (Grain Threshing)', backTitle: 'SEPARATION ALGORITHM', backDesc: 'separate(grain, chaff) - filtering useful from useless.' },
+      { id: 53, category: 'food', frontEmoji: '🌪️', frontTitle: 'Aata Pesna (Flour Grinding)', backTitle: 'TRANSFORMATION', backDesc: 'grind(grain) - converting raw material into usable form.' },
+      { id: 54, category: 'food', frontEmoji: '🍞', frontTitle: 'Roti Banana (Bread Making)', backTitle: 'ASSEMBLY PROCESS', backDesc: 'makeBread(flour) - combining processed ingredients into product.' },
+      { id: 55, category: 'food', frontEmoji: '🥛', frontTitle: 'Dahi Banana (Yogurt Making)', backTitle: 'FERMENTATION/CHEMICAL REACTION', backDesc: 'makeDahi(milk) - transforming input through biological process.' },
+      { id: 56, category: 'food', frontEmoji: '🧈', frontTitle: 'Makhan Nikalna (Butter Extraction)', backTitle: 'SEPARATION PROCESS', backDesc: 'extractButter(yogurt) - isolating specific component.' },
+      { id: 57, category: 'food', frontEmoji: '🥒', frontTitle: 'Achar Banana (Pickling)', backTitle: 'PRESERVATION', backDesc: 'makePickle(vegetable, spices) - extending data/product lifespan.' },
+
+      // ========== 10. SEWING & CRAFTS (6 cards) ==========
+      { id: 58, category: 'crafts', frontEmoji: '📏', frontTitle: 'Kaprle ki Paimash (Measurement)', backTitle: 'DIMENSIONING', backDesc: 'measure(cloth) - determining exact specifications.' },
+      { id: 59, category: 'crafts', frontEmoji: '📐', frontTitle: 'Namuna Banana (Pattern Making)', backTitle: 'TEMPLATE/BLUEPRINT', backDesc: 'createPattern(design) - creating a reusable model.' },
+      { id: 60, category: 'crafts', frontEmoji: '✂️', frontTitle: 'Kaprle ko Katna (Fabric Cutting)', backTitle: 'SLICING', backDesc: 'cut(cloth, pattern) - dividing into specific pieces.' },
+      { id: 61, category: 'crafts', frontEmoji: '🪡', frontTitle: 'Slai Karna (Stitching)', backTitle: 'LINKING/JOINING', backDesc: 'stitch(piece1, piece2) - connecting separate components.' },
+      { id: 62, category: 'crafts', frontEmoji: '🔘', frontTitle: 'Batan Lagana (Button Attachment)', backTitle: 'ADD COMPONENT', backDesc: 'attachButton(cloth) - adding functional elements.' },
+      { id: 63, category: 'crafts', frontEmoji: '🪵', frontTitle: 'Maramt Karna (Repairs)', backTitle: 'MAINTENANCE/BUGFIX', backDesc: 'mend(tear) - fixing damaged parts.' },
+
+      // ========== 11. HEALTH & SAFETY (6 cards) ==========
+      { id: 64, category: 'health', frontEmoji: '🧼', frontTitle: 'Hath Dhona (Hand Washing)', backTitle: 'SANITIZATION', backDesc: 'wash(hands) - removing harmful elements for safety.' },
+      { id: 65, category: 'health', frontEmoji: '💧', frontTitle: 'Pani Mehfooz (Water Safety)', backTitle: 'SAFE RESOURCE USAGE', backDesc: 'ensureSafety(water) - verifying resource quality before use.' },
+      { id: 66, category: 'health', frontEmoji: '💊', frontTitle: 'Supply ka Record (Medical Supply)', backTitle: 'INVENTORY MANAGEMENT', backDesc: 'recordSupply(medicine) - tracking available resources.' },
+      { id: 67, category: 'health', frontEmoji: '😷', frontTitle: 'Saans Mehfooz (Respiratory Safety)', backTitle: 'PROTECTIVE MEASURES', backDesc: 'useMask(pesticide) - implementing safeguards.' },
+      { id: 68, category: 'health', frontEmoji: '🩹', frontTitle: 'Zakham ki Marham (Wound Care)', backTitle: 'RECOVERY PROTOCOL', backDesc: 'treatWound() - restoring to healthy state.' },
+      { id: 69, category: 'health', frontEmoji: '🌫️', frontTitle: 'Dhool se Bacha (Dust Protection)', backTitle: 'BARRIER/FILTER', backDesc: 'protect(mouth) - blocking unwanted particles.' },
+
+      // ========== 12. SELF-RELIANCE (7 cards) ==========
+      { id: 70, category: 'resilience', frontEmoji: '🤝', frontTitle: 'Sarak se Saman (Resource Gathering)', backTitle: 'RESOURCE COLLECTION', backDesc: 'collectResources() - gathering needed supplies.' },
+      { id: 71, category: 'resilience', frontEmoji: '📦', frontTitle: 'Zakhira Andozi (Storage Planning)', backTitle: 'BUFFER MANAGEMENT', backDesc: 'store(supplies, months) - preparing for future needs.' },
+      { id: 72, category: 'resilience', frontEmoji: '🌾', frontTitle: 'Apni Zaroorat (Self-sufficiency)', backTitle: 'SELF-SUSTAINING SYSTEM', backDesc: 'sustainSelf() - system maintaining itself independently.' },
+      { id: 73, category: 'resilience', frontEmoji: '🔄', frontTitle: 'Tabadla (Bartering)', backTitle: 'EXCHANGE/TRADE', backDesc: 'exchange(item1, item2) - swapping resources for mutual benefit.' },
+      { id: 74, category: 'resilience', frontEmoji: '🎓', frontTitle: 'Hanarmandi Seekhna (Skill Development)', backTitle: 'LEARNING/UPGRADE', backDesc: 'learnSkill(trade) - acquiring new capabilities.' },
+      { id: 75, category: 'resilience', frontEmoji: '💰', frontTitle: 'Bachat Karna (Savings)', backTitle: 'RESOURCE ACCUMULATION', backDesc: 'save(amount) - reserving for emergencies.' },
+      { id: 76, category: 'resilience', frontEmoji: '⚖️', frontTitle: 'Taurat Rakhna (Balance)', backTitle: 'EQUILIBRIUM', backDesc: 'maintainBalance() - keeping system stable and sustainable.' },
+
+      // ========== 13. SEASONAL WORK (6 cards) ==========
+      { id: 77, category: 'seasonal', frontEmoji: '🌧️', frontTitle: 'Barish ki Tayyari (Monsoon Prep)', backTitle: 'SEASONAL ADAPTATION', backDesc: 'prepareForMonsoon() - adjusting for changing conditions.' },
+      { id: 78, category: 'seasonal', frontEmoji: '❄️', frontTitle: 'Sardion ke liye Tayyari (Winter Prep)', backTitle: 'COLD/LOW CONDITION', backDesc: 'prepareForWinter() - preparing for challenging season.' },
+      { id: 79, category: 'seasonal', frontEmoji: '☀️', frontTitle: 'Garmiyon ka Kaam (Summer Work)', backTitle: 'HOT/HIGH LOAD', backDesc: 'summerTask() - managing under stress conditions.' },
+      { id: 80, category: 'seasonal', frontEmoji: '🌤️', frontTitle: 'Mausam ka Mutala (Weather Tracking)', backTitle: 'DATA MONITORING', backDesc: 'trackWeather() - continuously observing external factors.' },
+      { id: 81, category: 'seasonal', frontEmoji: '🔄', frontTitle: 'Fasal ki Qism (Crop Rotation)', backTitle: 'SCHEDULING', backDesc: 'rotateCrop(season) - planning sequence of operations.' },
+      { id: 82, category: 'seasonal', frontEmoji: '🦠', frontTitle: 'Beemari Rokna (Disease Prevention)', backTitle: 'PREVENTIVE MAINTENANCE', backDesc: 'preventSeasonal(disease) - proactive rather than reactive.' },
+
+      // ========== 14. DAILY OPERATIONS (6 cards) ==========
+      { id: 83, category: 'operations', frontEmoji: '🌅', frontTitle: 'Subah ka Kaam (Morning Tasks)', backTitle: 'INITIALIZATION ROUTINE', backDesc: 'morningRoutine() - setting up for the day.' },
+      { id: 84, category: 'operations', frontEmoji: '☀️', frontTitle: 'Dopahar ka Kaam (Afternoon Tasks)', backTitle: 'PEAK OPERATION', backDesc: 'afternoonRoutine() - main work during peak hours.' },
+      { id: 85, category: 'operations', frontEmoji: '🌆', frontTitle: 'Shaam ka Kaam (Evening Tasks)', backTitle: 'WIND DOWN', backDesc: 'eveningRoutine() - wrapping up daily operations.' },
+      { id: 86, category: 'operations', frontEmoji: '📋', frontTitle: 'Hafta ka Mansooba (Weekly Planning)', backTitle: 'SCHEDULING CYCLE', backDesc: 'weeklyPlan() - planning work cycles and deadlines.' },
+      { id: 87, category: 'operations', frontEmoji: '📖', frontTitle: 'Mahana Ledger (Monthly Log)', backTitle: 'RECORD KEEPING', backDesc: 'logMonthly(activity) - documenting activities for analysis.' },
+      { id: 88, category: 'operations', frontEmoji: '⚡', frontTitle: 'Asaan Intizam (Efficient Management)', backTitle: 'OPTIMIZATION', backDesc: 'optimizeEfficiency() - maximizing output with minimum waste.' },
+
+      // ========== 15. COOPERATION (8 cards) ==========
+      { id: 89, category: 'cooperation', frontEmoji: '🤝', frontTitle: 'Gaon Main Madad (Village Cooperation)', backTitle: 'PEER-TO-PEER', backDesc: 'helpNeighbor(task) - mutual support networks.' },
+      { id: 90, category: 'cooperation', frontEmoji: '👥', frontTitle: 'Kaam Main Shamoliyat (Task Participation)', backTitle: 'COLLABORATION', backDesc: 'joinTask(community) - collective effort toward goal.' },
+      { id: 91, category: 'cooperation', frontEmoji: '👴', frontTitle: 'Tajruba ka Ishtirak (Experience Sharing)', backTitle: 'KNOWLEDGE TRANSFER', backDesc: 'shareExperience(elder) - learning from collective wisdom.' },
+      { id: 92, category: 'cooperation', frontEmoji: '💬', frontTitle: 'Mushwarat (Consultation)', backTitle: 'ADVICE SEEKING', backDesc: 'consult(expert) - seeking input from knowledgeable sources.' },
+      { id: 93, category: 'cooperation', frontEmoji: '✍️', frontTitle: 'Muahida (Agreement)', backTitle: 'CONTRACT/CONSENSUS', backDesc: 'makeAgreement(terms) - establishing mutual understanding.' },
+      { id: 94, category: 'cooperation', frontEmoji: '🎯', frontTitle: 'Azimana (Planning Together)', backTitle: 'JOINT STRATEGY', backDesc: 'planTogether(goal) - coordinated planning for shared goal.' },
+      { id: 95, category: 'cooperation', frontEmoji: '🧩', frontTitle: 'Masael Hal Karna (Problem Solving)', backTitle: 'TROUBLESHOOTING', backDesc: 'solveProblem(issue) - collective problem resolution.' },
+      { id: 96, category: 'cooperation', frontEmoji: '🚧', frontTitle: 'Hudood Barqrar (Maintaining Boundaries)', backTitle: 'RESOURCE ALLOCATION', backDesc: 'setBoundaries(property) - clear ownership and rights.' },
+
+      // ========== 16. ESSENTIAL SKILLS (5 cards) ==========
+      { id: 97, category: 'skills', frontEmoji: '🔩', frontTitle: 'Dheel ko Sakht (Tightening)', backTitle: 'FINE-TUNING', backDesc: 'tighten(bolt) - making precise adjustments.' },
+      { id: 98, category: 'skills', frontEmoji: '🪢', frontTitle: 'Rasi Bandhna (Rope Tying)', backTitle: 'SECURING/BINDING', backDesc: 'tieKnot(rope) - creating secure connections.' },
+      { id: 99, category: 'skills', frontEmoji: '⛏️', frontTitle: 'Khoudai Karna (Digging)', backTitle: 'DEEP EXPLORATION', backDesc: 'dig(depth) - investigating beyond surface level.' },
+      { id: 100, category: 'skills', frontEmoji: '🔨', frontTitle: 'Dak Karna (Hammering)', backTitle: 'DRIVING ACTION', backDesc: 'hammer(nail) - applying force to drive results.' },
     ];
 
     /* ===================================================
@@ -927,8 +910,6 @@
 
     /* ===================================================
        2. DYNAMIC DOM RENDERING
-       renderCards() clears the grid and rebuilds all
-       cards from the provided dataArray.
     =================================================== */
     function renderCards(dataArray) {
       grid.innerHTML = '';
@@ -945,7 +926,7 @@
         const front = document.createElement('div');
         front.classList.add('card-front');
         const tagClass = item.category === 'matlab' ? 'matlab' : '';
-        const tagText = item.category === 'matlab' ? 'MATLAB' : 'Farming';
+        const tagText = item.category.charAt(0).toUpperCase() + item.category.slice(1);
         front.innerHTML = `
           <span class="card-tag ${tagClass}">${tagText}</span>
           <div class="card-emoji">${item.frontEmoji}</div>
@@ -958,8 +939,8 @@
         const backClass = item.category === 'matlab' ? 'card-back matlab' : 'card-back';
         back.classList.add(...backClass.split(' '));
         back.innerHTML = `
-          <div class="card-back-eyebrow">${item.category === 'matlab' ? 'MATLAB' : 'CS'} Concept</div>
-          <div class="card-back-title">${item.backTitle}()</div>
+          <div class="card-back-eyebrow">${item.category.toUpperCase()}</div>
+          <div class="card-back-title">${item.backTitle}</div>
           <div class="card-divider"></div>
           <p class="card-back-desc">${item.backDesc}</p>
           <div class="card-back-icon">${item.frontEmoji}</div>
@@ -999,134 +980,114 @@
        4. 3D FLIP INTERACTIVITY — Event Delegation
     =================================================== */
     grid.addEventListener('click', function(e) {
-      const cardContainer = e.target.closest('.card-container');
-      if (!cardContainer) return;
-
-      const cardInner = cardContainer.querySelector('.card-inner');
-      cardInner.classList.toggle('flipped');
+      const container = e.target.closest('.card-container');
+      if (!container) return;
+      const inner = container.querySelector('.card-inner');
+      inner.classList.toggle('flipped');
     });
 
     /* ===================================================
-       5. SHUFFLE CARDS BUTTON
-       Uses Fisher-Yates algorithm
+       5. SHUFFLE FUNCTIONALITY
     =================================================== */
-    function fisherYatesShuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1));
-        [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-      }
-      return array;
-    }
-
     btnShuffle.addEventListener('click', function() {
-      btnShuffle.textContent = '⏳ Shuffling...';
-      btnShuffle.disabled = true;
-
-      setTimeout(() => {
-        const filtered = currentFilter === 'all' 
-          ? flashcardData 
-          : flashcardData.filter(card => card.category === currentFilter);
-        fisherYatesShuffle(filtered);
-        renderCards(filtered);
-
-        btnShuffle.textContent = '⇄ Shuffle Cards';
-        btnShuffle.disabled = false;
-      }, 300);
-    });
-
-    /* ===================================================
-       6. TAKE QUIZ BUTTON — Quiz Mode Logic
-    =================================================== */
-    let quizScore = 0;
-    let quizTotal = 0;
-    let currentCorrectFrontTitle = '';
-    let quizData = [];
-
-    function loadQuizQuestion() {
-      quizFeedback.classList.remove('show', 'success', 'error');
-      quizFeedback.textContent = '';
-      btnNextQ.style.display = 'none';
-
-      const questionCard = quizData[Math.floor(Math.random() * quizData.length)];
-      quizQTitle.textContent = questionCard.backTitle;
-      currentCorrectFrontTitle = questionCard.frontTitle;
-
-      const otherCards = quizData.filter(c => c.id !== questionCard.id);
-      fisherYatesShuffle(otherCards);
-      const wrongOptions = otherCards.slice(0, 2);
-
-      const allOptions = [questionCard, ...wrongOptions];
-      fisherYatesShuffle(allOptions);
-
-      quizOptions.innerHTML = '';
-      allOptions.forEach(option => {
-        const btn = document.createElement('button');
-        btn.classList.add('quiz-option');
-        btn.innerHTML = `<span class="opt-emoji">${option.frontEmoji}</span>${option.frontTitle}`;
-        btn.dataset.answer = option.frontTitle;
-        quizOptions.appendChild(btn);
-      });
-
-      quizScoreDisp.textContent = `${quizScore} / ${quizTotal}`;
-    }
-
-    quizOptions.addEventListener('click', function(e) {
-      const clickedBtn = e.target.closest('.quiz-option');
-      if (!clickedBtn) return;
-
-      const allOpts = quizOptions.querySelectorAll('.quiz-option');
-      allOpts.forEach(b => { b.disabled = true; });
-
-      quizTotal++;
-      const chosenAnswer = clickedBtn.dataset.answer;
-
-      if (chosenAnswer === currentCorrectFrontTitle) {
-        quizScore++;
-        clickedBtn.classList.add('correct');
-        quizFeedback.textContent = '✅ Correct! Great connection!';
-        quizFeedback.className = 'quiz-feedback show success';
-      } else {
-        clickedBtn.classList.add('wrong');
-        allOpts.forEach(b => {
-          if (b.dataset.answer === currentCorrectFrontTitle) {
-            b.classList.add('correct');
-          }
-        });
-        quizFeedback.textContent = `❌ Not quite! The answer was: "${currentCorrectFrontTitle}"`;
-        quizFeedback.className = 'quiz-feedback show error';
-      }
-
-      quizScoreDisp.textContent = `${quizScore} / ${quizTotal}`;
-      btnNextQ.style.display = 'inline-block';
-    });
-
-    btnNextQ.addEventListener('click', loadQuizQuestion);
-
-    btnQuiz.addEventListener('click', function() {
-      hero.style.display       = 'none';
-      gridLabel.style.display  = 'none';
-      grid.style.display       = 'none';
-      filterSection.style.display = 'none';
-
-      quizScore = 0;
-      quizTotal = 0;
-
-      quizData = currentFilter === 'all' 
+      const currentCards = currentFilter === 'all' 
         ? [...flashcardData] 
         : flashcardData.filter(card => card.category === currentFilter);
+      
+      for (let i = currentCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
+      }
+      renderCards(currentCards);
+    });
 
+    /* ===================================================
+       6. QUIZ MODE
+    =================================================== */
+    let quizMode = false;
+    let quizIndex = 0;
+    let quizCards = [];
+    let quizScore = 0;
+
+    btnQuiz.addEventListener('click', function() {
+      quizMode = true;
+      quizIndex = 0;
+      quizScore = 0;
+      quizCards = [...flashcardData];
+      grid.style.display = 'none';
       quizContainer.style.display = 'block';
       loadQuizQuestion();
     });
 
     btnBackLearn.addEventListener('click', function() {
+      quizMode = false;
+      grid.style.display = 'grid';
       quizContainer.style.display = 'none';
-      hero.style.display       = '';
-      gridLabel.style.display  = '';
-      grid.style.display       = '';
-      filterSection.style.display = '';
+      filterAndRender();
     });
 
+    function loadQuizQuestion() {
+      if (quizIndex >= quizCards.length) {
+        quizQTitle.textContent = 'Quiz Complete!';
+        quizOptions.innerHTML = '';
+        quizFeedback.textContent = `You scored ${quizScore} out of ${quizCards.length}!`;
+        quizFeedback.classList.add('show', 'success');
+        btnNextQ.style.display = 'none';
+        return;
+      }
+
+      const card = quizCards[quizIndex];
+      quizQTitle.textContent = card.backTitle;
+      quizScoreDisp.textContent = `${quizScore} / ${quizCards.length}`;
+      quizOptions.innerHTML = '';
+      quizFeedback.innerHTML = '';
+      quizFeedback.classList.remove('show', 'success', 'error');
+
+      const correctAnswer = card.frontTitle;
+      let options = [correctAnswer];
+      
+      // Add random wrong answers
+      const otherCards = flashcardData.filter(c => c.id !== card.id).sort(() => Math.random() - 0.5).slice(0, 3);
+      options = options.concat(otherCards.map(c => c.frontTitle));
+      options.sort(() => Math.random() - 0.5);
+
+      options.forEach(option => {
+        const btn = document.createElement('button');
+        btn.classList.add('quiz-option');
+        btn.textContent = option;
+        btn.addEventListener('click', function() {
+          handleQuizAnswer(this, option, correctAnswer);
+        });
+        quizOptions.appendChild(btn);
+      });
+
+      btnNextQ.style.display = 'none';
+    }
+
+    function handleQuizAnswer(btn, selected, correct) {
+      const allBtns = document.querySelectorAll('.quiz-option');
+      allBtns.forEach(b => b.disabled = true);
+
+      if (selected === correct) {
+        btn.classList.add('correct');
+        quizFeedback.textContent = '✓ Correct!';
+        quizFeedback.classList.add('show', 'success');
+        quizScore++;
+      } else {
+        btn.classList.add('wrong');
+        document.querySelector('.quiz-option').classList.add('correct');
+        quizFeedback.textContent = `✗ Wrong! The correct answer is: ${correct}`;
+        quizFeedback.classList.add('show', 'error');
+      }
+
+      quizIndex++;
+      btnNextQ.style.display = 'inline-block';
+    }
+
+    btnNextQ.addEventListener('click', function() {
+      loadQuizQuestion();
+    });
   </script>
+
 </body>
 </html>
